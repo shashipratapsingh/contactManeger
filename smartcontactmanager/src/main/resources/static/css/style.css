@@ -1,0 +1,20 @@
+body{
+	background: #e2e2e2!important;
+}
+
+.bg-primary{
+	background: #009688 !important;
+}
+
+.banner{
+	width: 100%;
+	height:93vh;
+	background: url(../img/banner.jpg);
+	background-size:cover;
+	color: white;
+}
+
+.my-card{
+	padding:50px;
+	background: #ffffff;
+}

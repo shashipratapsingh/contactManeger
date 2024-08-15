@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+        th:replace="~{normal/base::layout(~{::section})}">
+<head>
+	<meta charset="UTF-8" />
+	<title>Home Page</title>
+</head>
+<body>
+	
+	<section>
+	     <div class="card-my">
+	    
+	      <div class="card-body bg-light">
+	      
+	        
+	              <h1>Upload Excel File</h1>
+				    <form th:action="@{/user/upload-contact-data}" method="POST" enctype="multipart/form-data">
+				        <input type="file" name="file" >
+				        <button type="submit" >Upload</button>
+				    </form>
+				    <div th:if="${successMessage}">
+				        <p th:text="${successMessage}" style="color: green;"></p>
+				    </div>
+				    <div th:if="${errorMessage}">
+				        <p th:text="${errorMessage}" style="color: red;"></p>
+				    </div>
+	      </div>
+	    </div>
+	</section>
+	
+</body>
+</html>
